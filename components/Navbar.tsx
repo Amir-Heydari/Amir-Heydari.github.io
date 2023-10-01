@@ -71,7 +71,7 @@ export default function Navbar() {
           </Link>
         ))}
         <div className="fixed bottom-4 left-6 flex items-center flex-col gap-4">
-          <Link href="https://github.com/AmirhoseinHeydariAmjad">
+          <Link href="https://github.com/Amir-Heydari">
             <AiFillGithub className={socialClassNames} />
           </Link>
         </div>
