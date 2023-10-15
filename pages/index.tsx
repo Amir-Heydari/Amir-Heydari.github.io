@@ -1,5 +1,6 @@
 import Wrapper from "@/components/Wrapper";
 import Head from "next/head";
+import Link from "next/link";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,10 @@ export default function Home() {
         </div>
         <div className="sm:text-[7.2rem] xs:text-7xl text-5xl text-White font-medium">AMIR HEYDARI</div>
         <div className="mx-auto uppercase font-bold xs:text-2xl text-xl text-Orange text-end mt-8">A Frontend & Mobile developer</div>
+        <div className="flex justify-around items-center mt-12 font-medium text-2xl xs:text-2xl child:text-white child-hover:bg-Orange child:uppercase child-hover:text-black child:duration-300 child:p-3 child:rounded-md">
+          <Link href={"/contact"}>Contact</Link>
+          <Link href={"/portfolio"}>Portfolio</Link>
+        </div>
       </Wrapper>
     </>
   );
