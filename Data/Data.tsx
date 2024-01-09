@@ -75,6 +75,12 @@ const projects: ProjectProps[] = [
     name: "Todolist React Native App",
     tools: ["React Native", "Redux-Toolkit"],
   },
+  {
+    id: 6,
+    img: "/foodismProject.jpg",
+    name: "Food Recipe React Native App",
+    tools: ["React Native", "Redux-Toolkit", "Reanimated","Nativewind "],
+  }, 
 ];
 
 const skills = [
