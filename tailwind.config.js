@@ -1,36 +1,36 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-    './app/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {
-      boxShadow: {
-        ShadowBlur: "3px 3px 12px 3px rgba(255,255,255,0.075)"
+    content: [
+      './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+      './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+      extend: {
+        colors: {
+          background: '#121212',
+          primary: '#E0E0E0',
+          secondary: '#757575', 
+          accent: '#BDBDBD',
+          border: '#303030',
+          hover: '#BFBFBF',
+        },
+        animation: {
+          'fade-in': 'fadeIn 1s ease-in-out',
+          'slide-up': 'slideUp 0.5s ease-out',
+          'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        },
+        keyframes: {
+          fadeIn: {
+            '0%': { opacity: '0' },
+            '100%': { opacity: '1' },
+          },
+          slideUp: {
+            '0%': { transform: 'translateY(20px)', opacity: '0' },
+            '100%': { transform: 'translateY(0)', opacity: '1' },
+          },
+        },
       },
-      colors : {
-        White: "#ffffff",
-        Black: "#000000",
-        Orange: "#eeb844",
-        WhiteGray: "#b3b2b1",
-        Blur: "rgba(255,255,255,0.075)",
-        Glass: "rgba(255,255,255,0.15)"
-      }
     },
-    screens: {
-      xs: "480px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px"
-    },
-  },
-  plugins: [
-    function ({ addVariant }) {
-      addVariant('child', '& > *');
-      addVariant('child-hover', '& > *:hover');
+    plugins: [],
   }
-  ],
-}
