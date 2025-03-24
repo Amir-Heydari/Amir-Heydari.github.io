@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 👋 Hi, I'm Amirhossien Heydari Amjad!
 
-## Getting Started
+🚀 **Front-End Developer | JavaScript & TypeScript Expert | Open-Source Contributor**  
 
-First, run the development server:
+I’m a **React, React Native, Next & Angular Developer** with **3+ years** of experience building modern, scalable web applications. Passionate about **UI/UX, performance optimization, and best coding practices**, I thrive on creating sleek and efficient applications.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔥 **About Me**  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 💻 **Front-End Supervisor** at **Tyam Software**  
+- 🚀 **Expert in:** JavaScript, TypeScript, React, React Native, Next.js, Angular  
+- 🎨 **UI Enthusiast:** Tailwind CSS, ShadCN, Ant Design  
+- 🔍 **Focused on:** Performance, Accessibility, Design Patterns  
+- 🔧 **Tech Explorer:** Learning **Lynx.js, Three.js, and AI-based UI systems**  
+- 🎯 **Goal:** Pushing boundaries in web technologies and **contributing to open-source**  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 **Technical Skills**  
 
-To learn more about Next.js, take a look at the following resources:
+### 📌 **Front-End Development**  
+✅ React, React Native, Next.js, Angular  
+✅ TypeScript, JavaScript (ES6+)  
+✅ Redux, Zustand, React Query  
+✅ Tailwind CSS, ShadCN, Material UI  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### ⚙️ **Back-End & APIs**  
+✅ Node.js, Express.js  
+✅ Firebase, Supabase, REST APIs  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🏗 **Tools & Workflows**  
+✅ Git, GitHub, GitHub Actions  
+✅ Webpack, Vite, ESLint, Prettier  
+✅ Docker (basic usage)  
 
-## Deploy on Vercel
+## 📫 **Connect With Me**  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📧 **Email:** aheydariamjad@gmail.com  
+💼 **LinkedIn:** [https://www.linkedin.com/in/amir-heydari-amjad](#)    
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+🌟 **Let’s build something amazing together!**  
+💡 **Feel free to explore my repositories & reach out!** 🚀
