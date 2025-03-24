@@ -37,7 +37,7 @@ I’m a **React, React Native, Next & Angular Developer** with **3+ years** of e
 ## 📫 **Connect With Me**  
 
 📧 **Email:** aheydariamjad@gmail.com  
-💼 **LinkedIn:** [https://www.linkedin.com/in/amir-heydari-amjad](#)    
+💼 **LinkedIn:** [linkedin.com/in/amir-heydari-amjad](#)    
 
 ---
 
