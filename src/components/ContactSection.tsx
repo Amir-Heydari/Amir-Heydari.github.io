@@ -1,20 +1,22 @@
 'use client'
 
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { useForm } from 'react-hook-form'
+import ContactForm from './ContactForm'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { IoLogoWhatsapp } from 'react-icons/io'
+import { SiGmail } from 'react-icons/si'
 
-export default function AboutSection() {
+export default function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const headingRef = useRef<HTMLHeadingElement>(null)
-  const imageRef = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
-  
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    
+
     // Heading animation
     gsap.fromTo(
       headingRef.current,
@@ -29,114 +31,84 @@ export default function AboutSection() {
         },
       }
     )
-    
-    // Image and content animations
-    gsap.fromTo(
-      imageRef.current,
-      { opacity: 0, x: -50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 60%',
-        },
-      }
-    )
-    
-    gsap.fromTo(
-      contentRef.current,
-      { opacity: 0, x: 50 },
-      {
-        opacity: 1,
-        x: 0,
-        duration: 1,
-        delay: 0.3,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 60%',
-        },
-      }
-    )
-    
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }
   }, [])
-  
+
+  // Social media links
+  const socialLinks = [
+    {
+      name: 'Github',
+      url: 'https://github.com/Amir-Heydari',
+      icon: FaGithub,
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/amir-heydari-amjad',
+      icon: FaLinkedin,
+    },
+    {
+      name: 'WhatsApp',
+      url: 'https://wa.me/qr/UTYUYY6YQFMTI1',
+      icon: IoLogoWhatsapp,
+    },
+    {
+      name: 'Email',
+      url: 'mailto:aheydariamjad@gmail.com',
+      icon: SiGmail,
+    },
+  ]
+
   return (
-    <section 
-      id="about" 
+    <section
+      id="contact"
       ref={sectionRef}
-      className="py-20 relative"
+      className="py-20 bg-background/30 backdrop-blur-sm relative"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 
+          <h2
             ref={headingRef}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            About Me
+            Get In Touch
           </h2>
           <p className="text-secondary max-w-2xl mx-auto">
-            A brief introduction to who I am and what I do.
+            Have a project in mind or want to chat? Feel free to reach out!
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div ref={imageRef} className="relative">
-            <div className="relative h-64 md:h-96 w-full overflow-hidden rounded-lg">
-              <Image 
-                src="/api/placeholder/600/800"
-                alt="Profile"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 p-4 bg-border rounded-lg">
-              <p className="text-lg font-medium">5+ Years Experience</p>
-              <p className="text-sm text-secondary">Front-End Development</p>
-            </div>
-          </div>
-          
-          <div ref={contentRef}>
-            <h3 className="text-2xl font-bold mb-6">Front-End Developer with a passion for creating modern web experiences</h3>
-            
-            <p className="text-secondary mb-6">
-              I'm a front-end developer specializing in building exceptional digital experiences. Currently, I'm focused on creating accessible, responsive, and performant web applications using modern technologies like React, Next.js, and TypeScript.
-            </p>
-            
-            <p className="text-secondary mb-8">
-              With a strong background in UI/UX design and a passion for clean, efficient code, I strive to create seamless user experiences that are both visually appealing and highly functional. I enjoy working with complex problems and finding innovative solutions.
-            </p>
-            
-            <div className="grid grid-cols-2 gap-6 mb-8">
-              <div>
-                <h4 className="text-accent mb-3 font-medium">Education</h4>
-                <p className="font-medium">BSc in Computer Science</p>
-                <p className="text-secondary">University Name, 2018</p>
-              </div>
-              
-              <div>
-                <h4 className="text-accent mb-3 font-medium">Location</h4>
-                <p className="font-medium">San Francisco, CA</p>
-                <p className="text-secondary">Available for remote work</p>
-              </div>
-            </div>
-            
-            <a 
-              href="#contact" 
-              className="inline-flex items-center px-6 py-3 bg-border hover:bg-hover text-primary font-medium rounded-lg transition-colors duration-300"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {socialLinks.map((link, index) => (
+            <motion.a
+              key={link.name}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-border/20 hover:bg-border/40 rounded-2xl text-accent hover:text-primary transition-colors duration-300"
+              whileHover={{ y: -5 }}
+              aria-label={link.name}
             >
-              Get In Touch
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4 ml-2">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
+
+              <motion.div
+                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-border/10 backdrop-blur-sm p-8 rounded-lg border border-border flex justify-center gap-5 items-center"
+              >
+
+                <link.icon size={45} />
+
+                <h3 className="text-2xl font-bold">{link.name}</h3>
+              </motion.div>
+            </motion.a>
+          ))}
         </div>
       </div>
     </section>
   )
 }
+
+

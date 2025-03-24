@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import ProjectCard from './ProjectCard'
+import ProjectCard from '../helper/ProjectCard'
 
 // Mock project data - replace with your own projects
 const projects = [

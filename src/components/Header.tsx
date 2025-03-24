@@ -13,7 +13,7 @@ export default function Header() {
         { name: 'Home', href: '#home' },
         { name: 'Skills', href: '#skills' },
         { name: 'About', href: '#about' },
-        // { name: 'Contact', href: '#contact' },
+        { name: 'Contact', href: '#contact' },
     ]
 
     useEffect(() => {

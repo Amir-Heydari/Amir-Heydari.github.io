@@ -46,9 +46,9 @@ const SkillsCarousel = () => {
 
             <div className="flex flex-col items-center justify-center">
                 <h3 className="text-xl font-bold text-accent uppercase tracking-wider">{title === "Cicd" ? "CI/CD" : title}</h3>
-                <div className="relative overflow-hidden w-full h-24 my-4 bg-border/20 rounded-lg">
+                <div className="relative overflow-hidden w-full h-24 my-4 rounded-lg">
                     <motion.div
-                        className="flex w-max gap-12 mb-8"
+                        className="flex w-max gap-12 mb-8 bg-transparent"
                         initial={{ x: 0 }}
                         animate={{ x: "-50%" }}
                         transition={{

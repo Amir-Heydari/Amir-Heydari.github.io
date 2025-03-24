@@ -28,7 +28,6 @@ export default function HeroSection() {
 
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            <AnimatedBackground />
 
             <div className="container relative z-10 mx-auto px-4 text-center">
                 <motion.div
